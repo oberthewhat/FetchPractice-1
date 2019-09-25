@@ -29,4 +29,16 @@ const displayPost = () => {
   })
 }
 
+const fetchFive = () => {
+	const fivePosts = document.getElementById('all-posts')
+	arrayOfPosts.map((post, index) => {
+		const li = document.createElement('li')
+		const text = document.createTextNode(`#${index}, Title: ${post.title}:  ${post.body}, by user: ${post.userId}`)
+		li.appendChild(text)
+    fivePosts.append(li)
+	}
+	)
+
+}
+
 // Your job now is to follow the functions above and use them as templates to build the functionality the buttons in the index.html file already have laid out in it. This way you can learn how to build fetch requests and work with other apis and become a real developer!!
